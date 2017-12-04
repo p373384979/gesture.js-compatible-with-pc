@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">function viewport(){var phoneWidth = parseInt(window.screen.width);var phoneScale = phoneWidth/640;var ua = navigator.userAgent;if (/Android (\d+\.\d+)/.test(ua)){var version = parseFloat(RegExp.$1);if(ua.toLowerCase().indexOf("qq")>-1){document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=320">');return;}if(version>2.3){document.write('<meta name="viewport" content="width=640, minimum-scale = '+phoneScale+', maximum-scale = '+phoneScale+', target-densitydpi=device-dpi">');}else{document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');}}else{document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');}}viewport();</script>
+    <title>移动端手势操作Demo展示</title>
+    <style type="text/css">
+        html,body,div,span,p,a,img{margin:0;padding:0;}
+        html,body{width:100%;height:100%;background-color:#164e82;}
+        .main{width:640px;margin:0 auto; background-color:#fff;position:relative;}
+        
+        .stage{width:100%;height:200px;color:#000;font-size:36px; text-align:center; font-weight:bold;line-height:200px;}
+        
+        .example1{position:absolute;left:-160px;top:0px;}
+        .btn
+        {
+            margin:8px;
+            font-family:"微软雅黑";
+            color:#fff;
+            font-size:20px;
+            font-weight:bold;
+            width:auto;
+            padding:10px;
+            background-color:#164e82;
+            -webkit-border-radius:5px;
+            -ms-border-radius:5px;
+            -o-border-radius:5px;
+            -moz-border-radius:5px;
+            border-radius:5px;
+            border:none;
+            -webkit-box-shadow:2px 2px 1px #104080;
+            -ms-box-shadow:2px 2px 1px #104080;
+            -moz-box-shadow:2px 2px 1px #104080;
+            -o-box-shadow:2px 2px 1px #104080;
+            box-shadow:2px 2px 1px #104080;
+            cursor:pointer;
+        }
+        .horizon{width:300px;height:100px;}
+        .move,.vertical{width:180px;height:200px;}
+        .rotate{width:600px;height:250px;}
+        .actionbtn
+        {
+            width:100%;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="actionbtn">
+        <input class="btn click" type="button" value="用手指/鼠标在我上面单击" id="click"/>
+        <input class="btn" type="button" value="用手指/鼠标在我上面双击" id="doubliclick"/>
+        <input class="btn" type="button" value="用手指/鼠标在我上面按压" id="press"/>
+        <input class="btn horizon" type="button" value="用手指/鼠标在我上面左划" id="swipeleft"/>
+        <input class="btn horizon" type="button" value="用手指/鼠标在我上面右划" id="swiperight"/>
+        <input class="btn vertical" type="button" value="用手指/鼠标上划" id="swipeup"/>
+        <input class="btn vertical" type="button" value="用手指/鼠标下划" id="swipedown"/>
+        <input class="btn move" type="button" value="用手指/鼠标移动" id="drag"/>
+    </div>
+    <div class="stage"></div>
+    <div class="actionbtn">
+        <input class="btn rotate" type="button" value="用两个手指在我上面缩放" id="zoom"/>
+        <input class="btn rotate" type="button" value="用两个手指在我上面左旋转" id="rotatel"/>
+        <input class="btn rotate" type="button" value="用两个手指在我上面右旋转" id="rotater"/>
+    </div>
+</div>
+
+
+<!--整个页面只要这一个js文件,请在main.js中配置其他js以及相关依赖-->
+<script id="scriptrequire" defer async src="http://all.vic.sina.com.cn/hdcommon/js/sina.require.min.js" data-src="js/main.js" type="text/javascript"></script>
+</body>
+</html>
